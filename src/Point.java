@@ -46,6 +46,7 @@ public class Point
         }
     }
 
+    //pythagorean theorem
     public double dist(Point p){
         return Math.sqrt((Math.pow(xPos + p.getX(), 2)) + (Math.pow(yPos + p.getY(), 2)));
     }
