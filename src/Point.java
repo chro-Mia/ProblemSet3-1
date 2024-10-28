@@ -1,43 +1,44 @@
 public class Point
 {
-    private double xPos;
-    private double yPos;
+    private double x;
+    private double y;
 
     public Point(){
-        xPos = 0;
-        yPos = 0;
+        x = 0;
+        y = 0;
     }
 
     public Point(double x, double y){
-        xPos = x;
-        yPos = y;
+        this.x = x;
+        this.y = y;
     }
 
     public double getX(){
-        return xPos;
+        return x;
     }
 
     public double getY(){
-        return yPos;
+        return y;
     }
 
     public void move(double x, double y){
-        xPos += x;
-        yPos += y;
+        this.x += x;
+        this.y += y;
     }
 
     public int getQuadrant(){
+        //this code looks terrible, there's probably a better way to do this
 
         //quadrant I
-        if(xPos >= 0 && yPos >= 0){
+        if(x >= 0 && y >= 0){
             return 1;
         }
         //quadrant II
-        else if(xPos < 0 && yPos >= 0){
+        else if(x < 0 && y >= 0){
             return 2;
         }
         //quadrant III
-        else if(xPos <0 && yPos < 0){
+        else if(x <0 && y < 0){
             return 3;
         }
         //quadrant IV
@@ -48,6 +49,6 @@ public class Point
 
     //pythagorean theorem
     public double dist(Point p){
-        return Math.sqrt((Math.pow(xPos + p.getX(), 2)) + (Math.pow(yPos + p.getY(), 2)));
+        return Math.sqrt((Math.pow(x + p.getX(), 2)) + (Math.pow(y + p.getY(), 2)));
     }
 }
