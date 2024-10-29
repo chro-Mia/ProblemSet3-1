@@ -27,7 +27,7 @@ public class Point
     }
 
     public int getQuadrant(){
-        //this code looks terrible, there's probably a better way to do this
+        //possibly stinky code
 
         //quadrant I
         if(x >= 0 && y >= 0){
@@ -49,6 +49,6 @@ public class Point
 
     //pythagorean theorem
     public double dist(Point p){
-        return Math.sqrt((Math.pow(x + p.getX(), 2)) + (Math.pow(y + p.getY(), 2)));
+        return Math.sqrt((Math.pow(x - p.getX(), 2)) + (Math.pow(y - p.getY(), 2)));
     }
 }
